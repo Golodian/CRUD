@@ -109,7 +109,7 @@ app.post("/add-customer", (req, res) => {
   connection.query(insertName, [name], (err, result, fields) => {
     if (err) console.log(err);
 
-    console.log(result)
+    console.log(result);
     let id = result.insertId;
 
     connection.query(insertAddress, [id, address], (err, result) => {
@@ -145,8 +145,6 @@ app.get("/customers", (req, res) => {
 // 		}
 // 	);
 // });
-
-
 
 // #3. Route: /update => To  update data from the tables
 app.put("/update", (req, res) => {
@@ -189,7 +187,7 @@ app.delete("/remove-user", (req, res) => {
     }
   });
 
-  res.send("User Deleted")
+  res.send("User Deleted");
 });
 
 // Start the server and listen on port 2025
